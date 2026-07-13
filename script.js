@@ -233,9 +233,8 @@ const germanTranslations = Object.freeze({
   ". Your information is used only to respond to your inquiry.": ". Ihre Angaben werden ausschlie\u00dflich zur Beantwortung Ihrer Anfrage verwendet.",
   "Privacy choices": "Datenschutzauswahl",
   "We store only your language and privacy choice. Optional services remain off until you allow them.": "Wir speichern nur Ihre Sprach- und Datenschutzauswahl. Optionale Dienste bleiben deaktiviert, bis Sie diese erlauben.",
-  "Accept all": "Alle akzeptieren",
-  "Reject optional": "Optionale ablehnen",
-  "Choose settings": "Einstellungen w\u00e4hlen",
+  "Accept": "Annehmen",
+  "Reject": "Ablehnen",
   "Privacy settings": "Datenschutzeinstellungen",
   "Select which optional technologies 42 Craft may activate. You can change this choice at any time.": "W\u00e4hlen Sie aus, welche optionalen Technologien 42 Craft aktivieren darf. Sie k\u00f6nnen diese Auswahl jederzeit \u00e4ndern.",
   "Necessary": "Notwendig",
@@ -248,6 +247,10 @@ const germanTranslations = Object.freeze({
   "Allows marketing technologies only when they are added and you consent.": "Erlaubt Marketing-Technologien nur, wenn diese eingebunden werden und Sie zustimmen.",
   "Save selection": "Auswahl speichern",
   "Close privacy settings": "Datenschutzeinstellungen schlie\u00dfen",
+  "Web design for companies": "Webdesign f\u00fcr Unternehmen",
+  "Websites that build trust.": "Websites, die Vertrauen schaffen.",
+  "42 Craft designs and develops fast, modern websites that present your company clearly and turn visitors into inquiries.": "42 Craft gestaltet und entwickelt schnelle, moderne Websites, die Ihr Unternehmen klar pr\u00e4sentieren und Besucher zu Anfragen f\u00fchren.",
+  "View packages": "Pakete ansehen",
   "Web Design. Development. AI.": "Webdesign. Entwicklung. KI.",
   "Websites that look sharp and work fast.": "Websites, die stark aussehen und schnell funktionieren.",
   "42 Craft designs and builds modern company websites, from page structure and interface to development and launch. Useful AI features are added only where they create real value.": "42 Craft konzipiert und entwickelt moderne Unternehmenswebsites – von Seitenstruktur und Design bis zu Entwicklung und Launch. Sinnvolle KI-Funktionen kommen nur dort zum Einsatz, wo sie echten Mehrwert schaffen.",
@@ -633,9 +636,8 @@ consentTool.innerHTML = `
       <a href="datenschutz.html" data-consent-privacy data-consent-copy="Privacy Policy">Privacy Policy</a>
     </div>
     <div class="consent-actions">
-      <button class="button button-secondary consent-decision" type="button" data-consent-reject data-consent-copy="Reject optional">Reject optional</button>
-      <button class="button button-secondary consent-decision" type="button" data-consent-accept data-consent-copy="Accept all">Accept all</button>
-      <button class="consent-text-button" type="button" data-consent-open data-consent-copy="Choose settings">Choose settings</button>
+      <button class="button button-secondary consent-decision" type="button" data-consent-reject data-consent-copy="Reject">Reject</button>
+      <button class="button button-primary consent-decision" type="button" data-consent-accept data-consent-copy="Accept">Accept</button>
     </div>
   </section>
   <section class="consent-preferences" role="dialog" aria-modal="true" aria-labelledby="consent-preferences-title" data-consent-preferences hidden>
@@ -663,7 +665,6 @@ const consentPreferences = consentTool.querySelector("[data-consent-preferences]
 const analyticsConsent = consentTool.querySelector('[data-consent-category="analytics"]');
 const marketingConsent = consentTool.querySelector('[data-consent-category="marketing"]');
 const consentServiceStatus = consentTool.querySelector("[data-consent-status]");
-const acceptAllConsent = consentTool.querySelector("[data-consent-accept]");
 let activeConsent = readConsent();
 let consentReturnFocus = null;
 
@@ -673,7 +674,6 @@ let consentReturnFocus = null;
   input.closest(".consent-option")?.classList.toggle("is-unavailable", !isAvailable);
 });
 consentServiceStatus.hidden = availableConsentCategories.size > 0;
-acceptAllConsent.hidden = availableConsentCategories.size === 0;
 
 syncConsentLanguage = () => {
   consentTool.querySelectorAll("[data-consent-copy]").forEach((element) => {
@@ -736,7 +736,6 @@ const closeConsentPreferences = () => {
 
 consentTool.querySelector("[data-consent-accept]")?.addEventListener("click", () => writeConsent({ analytics: true, marketing: true }));
 consentTool.querySelector("[data-consent-reject]")?.addEventListener("click", () => writeConsent({ analytics: false, marketing: false }));
-consentTool.querySelector("[data-consent-open]")?.addEventListener("click", openConsentPreferences);
 consentTool.querySelector("[data-consent-close]")?.addEventListener("click", closeConsentPreferences);
 consentTool.querySelector("[data-consent-save]")?.addEventListener("click", () => writeConsent({ analytics: analyticsConsent.checked, marketing: marketingConsent.checked }));
 document.querySelectorAll("[data-cookie-settings]").forEach((button) => button.addEventListener("click", openConsentPreferences));
