@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <!-- Replace the html lang value with [LANGUAGE], for example "en" or "de". -->
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact | 42 Craft</title>
+    <meta name="description" content="[META_DESCRIPTION]" />
+    <meta property="og:title" content="Contact | 42 Craft" />
+    <meta property="og:description" content="[META_DESCRIPTION]" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="[OG_IMAGE]" />
+    <link rel="preload" href="assets/42-craft-logo.webp" as="image" type="image/webp" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="prestige.css?v=20" />
+  </head>
+  <body class="page-contact">
+    <div class="site-loader" data-site-loader aria-hidden="true"><img src="assets/42-craft-logo.webp" width="520" height="520" alt="" /><span></span></div>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header" data-header>
+      <nav class="nav container" aria-label="Primary navigation">
+        <a class="brand" href="index.html" aria-label="42 Craft home"><img class="brand-logo" src="assets/42-craft-logo.webp" width="520" height="520" alt="" aria-hidden="true" /><span>42 Craft</span></a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-menu" data-nav-toggle><span class="sr-only">Open menu</span><span aria-hidden="true"></span><span aria-hidden="true"></span></button>
+        <div class="nav-menu" id="site-menu" data-nav-menu>
+          <a href="services.html">Web Design</a>
+          <a href="work.html">AI Solutions</a>
+          <a href="process.html">Process</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="contact.html" aria-current="page">Contact</a>
+        </div>
+        <div class="language-switcher" role="group" aria-label="Language">
+          <button type="button" data-language="de" aria-pressed="false">DE</button>
+          <button type="button" data-language="en" aria-pressed="true">EN</button>
+        </div>
+        <a class="nav-cta" href="contact.html">Start a project</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="section final-cta contact-page">
+        <div class="container contact-grid">
+          <div class="reveal">
+            <p class="eyebrow">Contact</p>
+            <h1>Tell us about your website.</h1>
+            <p class="hero-lede">Send us your goal, required pages, and desired launch date. We will reply with a concrete next step.</p>
+            <div class="contact-details">
+              <a href="mailto:[EMAIL]">[EMAIL]</a>
+              <a href="tel:[PHONE_NUMBER]">[PHONE_NUMBER]</a>
+            </div>
+            <div class="contact-trust">
+              <span>Response: [RESPONSE_TIME]</span>
+              <span>Clear scope before work begins</span>
+              <span>No-obligation initial call</span>
+            </div>
+          </div>
+          <form class="contact-form reveal" novalidate data-contact-form>
+            <div class="form-row"><label for="name">Name</label><input id="name" name="name" type="text" autocomplete="name" required /></div>
+            <div class="form-row"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required /></div>
+            <div class="form-row"><label for="company">Company</label><input id="company" name="company" type="text" autocomplete="organization" /></div>
+            <div class="form-row"><label for="budget">Budget</label><select id="budget" name="budget" required><option value="">Select a range</option><option>Under [MINIMUM_PROJECT_BUDGET]</option><option>[BUDGET_RANGE_1]</option><option>[BUDGET_RANGE_2]</option><option>[BUDGET_RANGE_3]</option></select></div>
+            <div class="form-row"><label for="message">Message</label><textarea id="message" name="message" rows="5" required></textarea></div>
+            <input class="honeypot" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" />
+            <button class="button button-primary" type="submit">Send inquiry</button>
+            <p class="form-privacy">Your details are used only to respond to your inquiry. More information is available in the <a href="datenschutz.html">Privacy Policy</a>.</p>
+            <p class="form-status" role="status" aria-live="polite" data-form-status></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div><a class="brand" href="index.html"><img class="brand-logo" src="assets/42-craft-logo.webp" width="520" height="520" alt="" aria-hidden="true" /><span>42 Craft</span></a><p class="footer-kicker">Web design, development, and practical AI.</p></div>
+        <div class="footer-links"><a href="services.html">Web Design</a><a href="work.html">AI Solutions</a><a href="process.html">Process</a><a href="contact.html">Contact</a></div>
+        <div class="footer-links footer-legal"><a href="impressum.html">Imprint</a><a href="datenschutz.html">Privacy Policy</a><a href="agb.html">Terms and Conditions</a><button class="cookie-settings-link" type="button" data-cookie-settings>Cookie settings</button></div>
+      </div>
+    </footer>
+    <script src="script.js?v=16" defer></script>
+  </body>
+</html>
