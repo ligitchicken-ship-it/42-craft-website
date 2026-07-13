@@ -384,7 +384,9 @@ h3 {
 
 .hero-media::after {
   z-index: 1;
-  background: rgba(3, 5, 8, 0.62);
+  background:
+    linear-gradient(90deg, rgba(3, 5, 8, 0.76) 0%, rgba(3, 5, 8, 0.52) 42%, rgba(3, 5, 8, 0.16) 78%),
+    linear-gradient(0deg, rgba(3, 5, 8, 0.28), rgba(3, 5, 8, 0.08));
   content: "";
 }
 
@@ -392,7 +394,7 @@ h3 {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
+  object-position: center center;
   animation: hero-drift 18s var(--ease-premium) alternate infinite;
 }
 
@@ -1903,6 +1905,57 @@ h3 {
   background: #eef1f5;
 }
 
+.collaboration-band {
+  display: grid;
+  gap: clamp(2rem, 5vw, 5rem);
+  border-top: 1px solid rgba(11, 13, 16, 0.16);
+  border-bottom: 1px solid rgba(11, 13, 16, 0.16);
+  padding-block: clamp(2rem, 4vw, 3.5rem);
+  background: #eef1f5;
+  box-shadow: 0 0 0 100vmax #eef1f5;
+  clip-path: inset(0 -100vmax);
+  color: var(--color-text);
+}
+
+.collaboration-intro {
+  max-width: 32rem;
+}
+
+.collaboration-intro .eyebrow {
+  margin-bottom: 1rem;
+  color: var(--color-primary) !important;
+}
+
+.collaboration-lede {
+  margin: 0;
+  font-size: clamp(1.35rem, 2.3vw, 2.15rem);
+  font-weight: 720;
+  line-height: 1.15;
+}
+
+.collaboration-points {
+  display: grid;
+  margin: 0;
+}
+
+.collaboration-points div {
+  border-top: 1px solid rgba(11, 13, 16, 0.16);
+  padding-block: 1.25rem;
+}
+
+.collaboration-points dt {
+  margin-bottom: 0.45rem;
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.collaboration-points dd {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
 .section-intro {
   max-width: 34rem;
   align-self: end;
@@ -2116,7 +2169,9 @@ body.is-ready .hero-copy > :nth-child(5) { transition-delay: 360ms; }
   }
 
   .hero-media::after {
-    background: rgba(3, 5, 8, 0.72);
+    background:
+      linear-gradient(90deg, rgba(3, 5, 8, 0.78), rgba(3, 5, 8, 0.46)),
+      linear-gradient(0deg, rgba(3, 5, 8, 0.34), rgba(3, 5, 8, 0.14));
   }
 
   .hero-actions .button {
@@ -2343,6 +2398,21 @@ body.is-ready .hero-copy > :nth-child(5) { transition-delay: 360ms; }
 }
 
 @media (min-width: 980px) {
+  .collaboration-band {
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.6fr);
+    align-items: start;
+  }
+
+  .collaboration-points {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .collaboration-points div {
+    border-top: 0;
+    border-left: 1px solid rgba(11, 13, 16, 0.16);
+    padding: 0 1.5rem;
+  }
+
   .service-grid,
   .process-grid {
     grid-template-columns: repeat(4, minmax(0, 1fr));
