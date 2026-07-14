@@ -28,7 +28,7 @@ const germanTranslations = Object.freeze({
   "Web Design": "Webdesign",
   "AI Solutions": "KI-Lösungen",
   "Process": "Ablauf",
-  "Pricing": "Preise",
+  "Pricing": "Produkte",
   "Contact": "Kontakt",
   "Start a project": "Projekt starten",
   "Explore AI capabilities": "KI-Möglichkeiten ansehen",
