@@ -4,8 +4,8 @@ Fill in what is currently available. Items marked optional can remain empty for 
 
 ## 1. Brand
 
-- Agency display name: [AGENCY_NAME]
-- Legal business name: [LEGAL_BUSINESS_NAME]
+- Agency display name: 42 Craft
+- Legal business name: 42 Craft
 - Tagline: [TAGLINE]
 - One-sentence agency description: [SHORT_DESCRIPTION]
 - Logo file: assets/42-craft-logo.webp
@@ -62,9 +62,10 @@ Fill in what is currently available. Items marked optional can remain empty for 
 ## 6. Contact and Leads
 
 - Contact email: [EMAIL]
-- Phone number, optional: [PHONE_NUMBER]
+- Contact person: Amir Reza Ahmadi
+- Phone number, optional: +49 1522 4758271
 - Booking link: [BOOKING_LINK]
-- Expected response time: [RESPONSE_TIME]
+- Expected response time: 1-2 business days
 - Instagram: [INSTAGRAM_LINK]
 - LinkedIn: [LINKEDIN_LINK]
 - Facebook, optional: [FACEBOOK_LINK]
