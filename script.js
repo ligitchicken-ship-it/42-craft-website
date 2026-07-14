@@ -226,7 +226,7 @@ const germanTranslations = Object.freeze({
   "Select a range": "Budgetrahmen wählen",
   "Under [MINIMUM_PROJECT_BUDGET]": "Unter [MINIMUM_PROJECT_BUDGET]",
   "Message": "Nachricht",
-  "Response: [RESPONSE_TIME]": "Antwortzeit: [RESPONSE_TIME]",
+  "Response: 1-2 business days": "Antwortzeit: 1-2 Werktage",
   "Send inquiry": "Anfrage senden",
   "This preview validates entries locally. Before launch, connect [FORM_ENDPOINT_OR_CRM] and update the": "Diese Vorschau prüft Eingaben lokal. Verbinden Sie vor dem Launch [FORM_ENDPOINT_OR_CRM] und ergänzen Sie die",
   "with the actual recipient and retention period.": "um den tatsächlichen Empfänger und die Speicherdauer.",
@@ -1262,6 +1262,6 @@ form?.addEventListener("submit", (event) => {
     return;
   }
 
-  formStatus.textContent = currentLanguage === "de" ? "Das Formular ist noch nicht verbunden. Schreiben Sie uns bitte an [EMAIL]." : "The form is not connected yet. Please email us at [EMAIL].";
+  formStatus.textContent = currentLanguage === "de" ? "Das Formular ist noch nicht verbunden. Bitte kontaktieren Sie uns vorübergehend telefonisch." : "The form is not connected yet. Please contact us by phone until the email address is connected.";
   form.reset();
 });
